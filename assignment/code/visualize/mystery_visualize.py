@@ -2,6 +2,8 @@
 
 import os
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")  # non-interactive, headless-safe
 import matplotlib.pyplot as plt
 import cv2
 import pdb
@@ -11,7 +13,7 @@ def render_2_1(infile="mysterydata/mysterydata2.npy", channels=(0, 4), outprefix
     for ch in channels:
         a = np.log1p(X[:, :, ch].astype(np.float64))
         a = (a - np.nanmin(a)) / (np.nanmax(a) - np.nanmin(a) + 1e-12)  # normalize
-        plt.imsave(f"{outprefix}_ch{ch}.png", a, cmap="gray")
+        plt.imsave(f"{outprefix}_ch{ch}.png", a) 
 
 # --- 2.2: data with NaNs/±Inf → set vmin/vmax explicitly and save ---
 def render_2_2(infile="mysterydata/mysterydata3.npy", channels=(1, 7), outprefix="vis3_nanfixed"):
@@ -20,7 +22,7 @@ def render_2_2(infile="mysterydata/mysterydata3.npy", channels=(1, 7), outprefix
         a = X[:, :, ch].astype(np.float64)
         vmin, vmax = np.nanmin(a), np.nanmax(a)
         a = np.nan_to_num(a, nan=vmin, posinf=vmax, neginf=vmin)          # optional but safe
-        plt.imsave(f"{outprefix}_ch{ch}.png", a, vmin=vmin, vmax=vmax, cmap="gray")
+        plt.imsave(f"{outprefix}_ch{ch}.png", a, vmin=vmin, vmax=vmax)
 
 
 def colormapArray(X, colors):
