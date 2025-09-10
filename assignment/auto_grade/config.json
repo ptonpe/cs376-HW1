@@ -1,0 +1,54 @@
+{
+    "assignment_name": "HW1 - Numpy and Image Processing",
+    "required_files": [
+        "numpy/warmups.py",
+        "numpy/tests.py",
+        "dither/dither.py"
+    ],
+    "optional_files": [
+        "numpy/unit_tests_tests.py",
+        "numpy/unit_tests_warmups.py",
+        "dither/unit_tests_3_1.py",
+        "dither/unit_tests_3_2.py",
+        "dither/unit_tests_3_3.py",
+        "dither/unit_tests_3_4.py",
+        "dither/unit_tests_3_5.py"
+    ],
+    "tests": [
+        {
+            "test_file": "numpy/unit_tests_tests.py",
+            "points": 24,
+            "description": "Numpy Tests"
+        },
+        {
+            "test_file": "numpy/unit_tests_warmups.py",
+            "points": 16,
+            "description": "Numpy Warmups"
+        },
+        {
+            "test_file": "dither/unit_tests_3_1.py",
+            "points": 12,
+            "description": "Dither 3.1"
+        },
+        {
+            "test_file": "dither/unit_tests_3_2.py",
+            "points": 12,
+            "description": "Dither 3.2"
+        },
+        {
+            "test_file": "dither/unit_tests_3_3.py",
+            "points": 12,
+            "description": "Dither 3.3"
+        },
+        {
+            "test_file": "dither/unit_tests_3_4.py",
+            "points": 12,
+            "description": "Dither 3.4"
+        },
+        {
+            "test_file": "dither/unit_tests_3_5.py",
+            "points": 12,
+            "description": "Dither 3.5"
+        }
+    ]
+}
